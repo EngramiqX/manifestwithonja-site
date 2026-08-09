@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Manifest with Onja — Where Energy Meets Evidence</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,400;1,9..144,500&family=Inter:wght@300;400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg-deep:#130d29;--bg-panel:#1d1642;--bg-panel-2:#241b4f;--gold:#d4af6a;--gold-bright:#eccd93;--cream:#f3eee3;--lavender:#a897cf;--lavender-dim:#7c6ba3;--rose:#c17a5f;--line:rgba(212,175,106,0.16);}
+  *{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+  body{background:var(--bg-deep);color:var(--cream);font-family:'Inter',sans-serif;font-weight:400;line-height:1.6;overflow-x:hidden;}
+  @media(prefers-reduced-motion:reduce){*{animation-duration:0.01ms !important;animation-iteration-count:1 !important;transition-duration:0.01ms !important;}}
+  a{color:inherit;}.eyebrow{font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.22em;text-transform:uppercase;color:var(--gold);}
+  h1,h2,h3{font-family:'Fraunces',serif;font-weight:400;color:var(--cream);letter-spacing:-0.01em;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 32px;}
+  .stars{position:fixed;inset:0;pointer-events:none;z-index:0;background-image:radial-gradient(1px 1px at 20% 30%,rgba(212,175,106,0.5),transparent),radial-gradient(1px 1px at 60% 70%,rgba(168,151,207,0.4),transparent),radial-gradient(1.5px 1.5px at 80% 20%,rgba(212,175,106,0.35),transparent),radial-gradient(1px 1px at 35% 85%,rgba(168,151,207,0.3),transparent),radial-gradient(1px 1px at 92% 55%,rgba(212,175,106,0.3),transparent),radial-gradient(1.5px 1.5px at 10% 60%,rgba(168,151,207,0.25),transparent);background-size:100% 100%;opacity:0.8;}
+  nav{position:sticky;top:0;z-index:50;backdrop-filter:blur(14px);background:rgba(19,13,41,0.72);border-bottom:1px solid var(--line);}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;}
+  .wordmark{font-family:'Fraunces',serif;font-size:1.15rem;font-style:italic;letter-spacing:0.01em;}.wordmark span{color:var(--gold);}
+  .navlinks{display:flex;gap:36px;font-size:0.88rem;color:var(--lavender);}.navlinks a{transition:color 0.2s;}.navlinks a:hover{color:var(--gold-bright);}
+  .nav-cta{font-family:'Space Mono',monospace;font-size:0.75rem;letter-spacing:0.05em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:10px 20px;border-radius:2px;transition:all 0.25s;}.nav-cta:hover{background:var(--gold);color:var(--bg-deep);}
+  @media(max-width:820px){.navlinks{display:none;}}
+  header.hero{position:relative;z-index:1;padding:120px 0 100px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:60px;align-items:center;}
+  @media(max-width:900px){header.hero{grid-template-columns:1fr;padding:70px 0 60px;text-align:left;}}
+  .hero-copy h1{font-size:clamp(2.6rem,5.2vw,4.4rem);line-height:1.04;margin:22px 0 26px;}.hero-copy h1 em{font-style:italic;color:var(--gold-bright);}
+  .hero-copy p.lede{font-size:1.12rem;color:var(--lavender);max-width:480px;margin-bottom:36px;}
+  .hero-actions{display:flex;gap:18px;flex-wrap:wrap;align-items:center;}
+  .btn-primary{font-family:'Space Mono',monospace;font-size:0.78rem;letter-spacing:0.05em;text-transform:uppercase;background:var(--gold);color:var(--bg-deep);padding:16px 30px;border-radius:2px;display:inline-block;transition:transform 0.2s,background 0.2s;}.btn-primary:hover{background:var(--gold-bright);transform:translateY(-1px);}
+  .btn-ghost{font-size:0.9rem;color:var(--cream);border-bottom:1px solid var(--lavender-dim);padding-bottom:2px;transition:border-color 0.2s,color 0.2s;}.btn-ghost:hover{color:var(--gold-bright);border-color:var(--gold-bright);}
+  .breath-stage{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;height:420px;}
+  .breath-ring-outer{position:relative;width:280px;height:280px;border-radius:50%;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;}
+  .breath-ring-mid{width:220px;height:220px;border-radius:50%;border:1px solid rgba(212,175,106,0.28);display:flex;align-items:center;justify-content:center;transition:transform 4s cubic-bezier(.45,0,.55,1);}
+  .breath-core{width:150px;height:150px;border-radius:50%;background:radial-gradient(circle at 35% 30%,var(--gold-bright),var(--gold) 45%,var(--rose) 130%);box-shadow:0 0 60px rgba(212,175,106,0.35),0 0 120px rgba(193,122,95,0.15);display:flex;flex-direction:column;align-items:center;justify-content:center;transition:transform 4s cubic-bezier(.45,0,.55,1);}
+  .breath-core .phase{font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.14em;text-transform:uppercase;color:var(--bg-deep);font-weight:700;}
+  .breath-core .count{font-family:'Space Mono',monospace;font-size:1.6rem;color:var(--bg-deep);font-weight:700;margin-top:4px;}
+  .breath-caption{margin-top:26px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--lavender-dim);text-align:center;}
+  .scale-in .breath-core,.scale-in .breath-ring-mid{transform:scale(1.28);}.scale-hold .breath-core,.scale-hold .breath-ring-mid{transform:scale(1.28);}.scale-out .breath-core,.scale-out .breath-ring-mid{transform:scale(0.86);}.scale-hold2 .breath-core,.scale-hold2 .breath-ring-mid{transform:scale(0.86);}
+  section{position:relative;z-index:1;padding:100px 0;border-top:1px solid var(--line);}
+  .section-head{max-width:640px;margin-bottom:64px;}.section-head h2{font-size:clamp(1.9rem,3.4vw,2.7rem);margin-top:14px;}.section-head p{color:var(--lavender);margin-top:16px;font-size:1.02rem;}
+  .duality{display:grid;grid-template-columns:1fr 1px 1fr;gap:0;background:var(--bg-panel);border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+  .duality-col{padding:48px 44px;}.duality-divider{background:linear-gradient(180deg,transparent,var(--line) 20%,var(--line) 80%,transparent);}
+  .duality-col h3{font-size:1.5rem;font-style:italic;margin-bottom:18px;}.duality-col.energy h3{color:var(--gold-bright);}.duality-col.evidence h3{color:var(--lavender);}
+  .duality-col p{color:var(--lavender);font-size:0.98rem;margin-bottom:14px;}.duality-col ul{list-style:none;}
+  .duality-col li{font-size:0.92rem;color:var(--cream);padding:10px 0;border-top:1px solid var(--line);}.duality-col li:first-of-type{border-top:none;}.duality-col li b{color:var(--gold);font-weight:500;}
+  @media(max-width:800px){.duality{grid-template-columns:1fr;}.duality-divider{display:none;}}
+  .ask-demo{background:var(--bg-panel);border:1px solid var(--line);border-radius:4px;padding:52px;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center;}
+  @media(max-width:800px){.ask-demo{grid-template-columns:1fr;padding:34px;}}
+  .ask-card{background:var(--bg-deep);border:1px solid var(--gold);border-radius:4px;padding:38px;position:relative;}
+  .ask-card .tag{font-family:'Space Mono',monospace;font-size:0.65rem;letter-spacing:0.14em;color:var(--gold);text-transform:uppercase;}
+  .ask-card .question{font-family:'Fraunces',serif;font-style:italic;font-size:1.5rem;color:var(--cream);margin-top:18px;line-height:1.35;}
+  .ask-steps{list-style:none;counter-reset:step;}
+  .ask-steps li{counter-increment:step;padding:18px 0 18px 40px;position:relative;border-top:1px solid var(--line);color:var(--lavender);font-size:0.95rem;}
+  .ask-steps li:first-child{border-top:none;}.ask-steps li::before{content:counter(step,decimal-leading-zero);position:absolute;left:0;top:18px;font-family:'Space Mono',monospace;color:var(--gold);font-size:0.8rem;}
+  .ask-steps li b{color:var(--cream);font-weight:500;}
+  .offer-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:4px;overflow:hidden;}
+  @media(max-width:900px){.offer-grid{grid-template-columns:1fr;}}
+  .offer-card{background:var(--bg-panel);padding:42px 36px;transition:background 0.25s;}.offer-card:hover{background:var(--bg-panel-2);}
+  .offer-card .num{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--gold);letter-spacing:0.1em;}
+  .offer-card h3{font-size:1.35rem;margin:16px 0 12px;}.offer-card p{color:var(--lavender);font-size:0.94rem;margin-bottom:20px;}
+  .offer-card .price{font-family:'Space Mono',monospace;font-size:0.85rem;color:var(--gold-bright);}
+  .offer-card .offer-btn{display:inline-block;margin-top:16px;font-family:'Space Mono',monospace;font-size:0.72rem;letter-spacing:0.05em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:10px 18px;border-radius:2px;transition:all 0.25s;text-decoration:none;}.offer-card .offer-btn:hover{background:var(--gold);color:var(--bg-deep);}
+  .coming-soon{display:inline-block;margin-top:12px;font-family:'Space Mono',monospace;font-size:0.68rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--lavender-dim);border:1px dashed var(--lavender-dim);padding:8px 14px;border-radius:2px;}
+  .patron{background:linear-gradient(120deg,var(--bg-panel-2),var(--bg-panel));border:1px solid var(--line);border-radius:4px;padding:56px;display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .patron h3{font-size:1.7rem;max-width:440px;}.patron p{color:var(--lavender);margin-top:12px;max-width:440px;font-size:0.96rem;}
+  footer{padding:90px 0 50px;position:relative;z-index:1;}
+  .signup-block{text-align:center;max-width:560px;margin:0 auto 80px;}
+  .signup-block h2{font-size:clamp(1.8rem,3.4vw,2.4rem);margin:16px 0 20px;}.signup-block p{color:var(--lavender);margin-bottom:34px;}
+  .signup-form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;}
+  .signup-form input{background:var(--bg-panel);border:1px solid var(--line);border-radius:2px;padding:15px 18px;color:var(--cream);font-family:'Inter',sans-serif;font-size:0.92rem;min-width:280px;}
+  .signup-form input:focus{outline:1.5px solid var(--gold);border-color:var(--gold);}.signup-form input::placeholder{color:var(--lavender-dim);}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:32px;border-top:1px solid var(--line);flex-wrap:wrap;gap:20px;}
+  .footer-bottom .wordmark{font-size:1rem;}.foot-links{display:flex;gap:26px;font-size:0.85rem;color:var(--lavender);}.foot-links a:hover{color:var(--gold-bright);}
+  .foot-meta{font-family:'Space Mono',monospace;font-size:0.72rem;color:var(--lavender-dim);letter-spacing:0.04em;}
+</style>
+</head>
+<body>
+<div class="stars"></div>
+<nav>
+  <div class="wrap">
+    <div class="wordmark">manifest <span>with</span> onja</div>
+    <div class="navlinks">
+      <a href="#philosophy">Philosophy</a>
+      <a href="#askfirmations">Askfirmations</a>
+      <a href="#offerings">Practices</a>
+      <a href="#patron">The Collective</a>
+    </div>
+    <a href="#signup" class="nav-cta">Join Free</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap" style="display:contents;">
+    <div class="hero-copy">
+      <p class="eyebrow">Dear Life Collection · Manifestation &amp; Breathwork</p>
+      <h1>Where <em>energy</em> meets evidence.</h1>
+      <p class="lede">Manifestation without the nervous system is just wishing. Onja pairs breathwork, reticular-activating-system training, and Askfirmations — questions your brain can't ignore — into a practice you can actually feel working.</p>
+      <div class="hero-actions">
+        <a href="#signup" class="btn-primary">Start Your First Breath Session</a>
+        <a href="#philosophy" class="btn-ghost">See the science ↓</a>
+      </div>
+    </div>
+    <div class="breath-stage">
+      <div class="breath-ring-outer">
+        <div class="breath-ring-mid" id="ringMid">
+          <div class="breath-core" id="breathCore">
+            <div class="phase" id="phaseLabel">Inhale</div>
+            <div class="count" id="phaseCount">4</div>
+          </div>
+        </div>
+      </div>
+      <p class="breath-caption">Live box breath · inhale 4 / hold 4 / exhale 4 / hold 4</p>
+    </div>
+  </div>
+</header>
+
+<section id="philosophy">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The Philosophy</p>
+      <h2>Two languages for the same shift.</h2>
+      <p>Every practice in this collection is built twice — once as felt experience, once as mechanism. If it can't survive translation into the body's own systems, it doesn't make the cut.</p>
+    </div>
+    <div class="duality">
+      <div class="duality-col energy">
+        <h3>The energy</h3>
+        <p>What it feels like when the practice lands.</p>
+        <ul>
+          <li><b>Askfirmations</b> — a felt shift from doubt to curiosity, in one sentence.</li>
+          <li><b>Box breath</b> — the exhale that finally reaches your shoulders.</li>
+          <li><b>Numerology anchors</b> — dates and cycles that make timing feel intentional.</li>
+          <li><b>Visualization</b> — rehearsing the outcome until it feels familiar, not foreign.</li>
+        </ul>
+      </div>
+      <div class="duality-divider"></div>
+      <div class="duality-col evidence">
+        <h3>The evidence</h3>
+        <p>What's happening underneath, in plain terms.</p>
+        <ul>
+          <li><b>RAS</b> — your reticular activating system starts filtering for what you've named.</li>
+          <li><b>Vagal tone</b> — paced exhales lengthen the vagus nerve's calming signal.</li>
+          <li><b>Priming</b> — repeated, specific cues shift what your attention treats as relevant.</li>
+          <li><b>Mental rehearsal</b> — the same motor and reward circuits fire in imagined and real practice.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="askfirmations">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">The Signature Format</p>
+      <h2>Askfirmations: affirmations your brain can't dismiss.</h2>
+      <p>A flat statement — "I am successful" — is easy for a skeptical mind to reject outright. Phrase it as a question, and the brain goes looking for the answer instead.</p>
+    </div>
+    <div class="ask-demo">
+      <div class="ask-card">
+        <p class="tag">Try one now</p>
+        <p class="question">"Why does opportunity keep finding me lately?"</p>
+      </div>
+      <ol class="ask-steps">
+        <li><b>State it as a question.</b> The mind can argue with a claim. It can't help but search for an answer.</li>
+        <li><b>Keep it present tense.</b> "Keeps finding me," not "will find me" — the RAS filters for now, not someday.</li>
+        <li><b>Pair it with one breath cycle.</b> A regulated body accepts new evidence faster than a braced one.</li>
+        <li><b>Let the answer surface unscripted.</b> Whatever your mind offers first is usually the truest data point.</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section id="offerings">
+  <div class="wrap">
+    <div class="section-head">
+      <p class="eyebrow">Ways In</p>
+      <h2>Start where your nervous system is today.</h2>
+    </div>
+    <div class="offer-grid">
+      <div class="offer-card">
+        <p class="num">01</p>
+        <h3>The Manifestation Morning Method</h3>
+        <p>A complete 6-minute morning ritual using all 4 ways your brain rewires itself. Neuroscience-backed. Built for real life.</p>
+        <p class="price">$17.77 · digital download</p>
+        <a href="https://stan.store/ManifestwithOnja" class="offer-btn" target="_blank">Get It Now →</a>
+      </div>
+      <div class="offer-card">
+        <p class="num">02</p>
+        <h3>Askfirmations Audio Decks</h3>
+        <p>Themed decks — money, relationships, creative work — narrated, timed to breath, and written to survive a skeptical re-read.</p>
+        <p class="price">Coming soon · $2.99 · single deck</p>
+        <span class="coming-soon">Notify Me ↓</span>
+      </div>
+      <div class="offer-card">
+        <p class="num">03</p>
+        <h3>Let That Sh*t Go Journal</h3>
+        <p>A guided healing journal to release what no longer serves you. 20 pages of reflection prompts and exercises.</p>
+        <p class="price">Coming soon · $11.11</p>
+        <span class="coming-soon">Notify Me ↓</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="patron">
+  <div class="wrap">
+    <div class="patron">
+      <div>
+        <p class="eyebrow">The Dear Life Collective</p>
+        <h3>Monthly practices, early access, and a room full of people doing the same inner work.</h3>
+        <p>Join the waitlist for founding collective membership — early access and founding member pricing coming soon.</p>
+      </div>
+      <a href="#signup" class="btn-primary">Join the Waitlist</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="signup-block" id="signup">
+      <p class="eyebrow">Free · Weekly</p>
+      <h2>One Askfirmation, one breath, one Sunday.</h2>
+      <p>A short weekly email from Onja — no funnel, just the practice.</p>
+      <form class="signup-form" id="signupForm" action="https://formspree.io/f/xbgrdqqg" method="POST">
+        <input type="email" name="email" placeholder="you@email.com" required>
+        <input type="hidden" name="_subject" value="New ManifestwithOnja Signup">
+        <button type="submit" class="btn-primary" style="border:none;cursor:pointer;">Join Free</button>
+      </form>
+      <p id="signupMsg" style="margin-top:14px;font-family:'Space Mono',monospace;font-size:0.85rem;display:none;"></p>
+    </div>
+    <div class="footer-bottom">
+      <div class="wordmark">manifest <span style="color:var(--gold);">with</span> onja</div>
+      <div class="foot-links">
+        <a href="https://www.instagram.com/manifestwithonja" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@onja.borrelli" target="_blank">TikTok</a>
+        <a href="https://www.linkedin.com/in/onja-borrelli-14a205421" target="_blank">LinkedIn</a>
+      </div>
+      <div class="foot-meta">DEAR LIFE COLLECTION © 2026</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const phaseLabel=document.getElementById('phaseLabel');
+  const phaseCount=document.getElementById('phaseCount');
+  const stage=document.querySelector('.breath-stage');
+  const phases=[{name:'Inhale',cls:'scale-in'},{name:'Hold',cls:'scale-hold'},{name:'Exhale',cls:'scale-out'},{name:'Hold',cls:'scale-hold2'}];
+  let phaseIndex=0,secondsLeft=4;
+  function applyPhase(){stage.classList.remove('scale-in','scale-hold','scale-out','scale-hold2');stage.classList.add(phases[phaseIndex].cls);phaseLabel.textContent=phases[phaseIndex].name;phaseCount.textContent=secondsLeft;}
+  applyPhase();
+  setInterval(()=>{secondsLeft-=1;if(secondsLeft<=0){phaseIndex=(phaseIndex+1)%phases.length;secondsLeft=4;}phaseCount.textContent=secondsLeft;phaseLabel.textContent=phases[phaseIndex].name;stage.classList.remove('scale-in','scale-hold','scale-out','scale-hold2');stage.classList.add(phases[phaseIndex].cls);},1000);
+
+  const signupForm=document.getElementById('signupForm');
+  const signupMsg=document.getElementById('signupMsg');
+  signupForm.addEventListener('submit',async(e)=>{
+    e.preventDefault();
+    const btn=signupForm.querySelector('button');
+    btn.textContent='Sending…';btn.disabled=true;
+    try{
+      const response=await fetch(signupForm.action,{method:'POST',body:new FormData(signupForm),headers:{'Accept':'application/json'}});
+      if(response.ok){signupForm.reset();signupMsg.textContent="You're in. Check your inbox.";signupMsg.style.color='#eccd93';signupMsg.style.display='block';}
+      else{signupMsg.textContent="Something went wrong — try again.";signupMsg.style.color='#c17a5f';signupMsg.style.display='block';}
+    }catch(err){signupMsg.textContent="Something went wrong — try again.";signupMsg.style.color='#c17a5f';signupMsg.style.display='block';}
+    finally{btn.textContent='Join Free';btn.disabled=false;}
+  });
+</script>
+</body>
+</html>
