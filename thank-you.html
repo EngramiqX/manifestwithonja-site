@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Your 3-Day Reset — Manifest with Onja</title>
+<meta name="robots" content="noindex" />
+<style>
+  :root {
+    --indigo: #2B2560;
+    --indigo-deep: #1C1740;
+    --gold: #AF8A3E;
+    --gold-light: #C9A227;
+    --cream: #F4F1EA;
+    --ink: #2E2A2A;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: -apple-system, "Segoe UI", Calibri, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 20px;
+  }
+  .card {
+    max-width: 560px;
+    width: 100%;
+    text-align: center;
+    padding: 56px 40px 48px;
+    background: #FFFFFF;
+    border: 1px solid #E4DFD1;
+    position: relative;
+  }
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 14px; left: 14px; right: 14px; bottom: 14px;
+    border: 1px solid var(--gold-light);
+    opacity: 0.35;
+    pointer-events: none;
+  }
+  .kicker {
+    letter-spacing: 0.18em;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 400;
+    font-size: 34px;
+    color: var(--indigo);
+    margin: 0 0 8px;
+    line-height: 1.15;
+  }
+  .script {
+    font-family: "Bookman Old Style", Georgia, serif;
+    font-style: italic;
+    color: var(--gold);
+    font-size: 22px;
+    margin: 0 0 28px;
+  }
+  p.lead {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--ink);
+    margin: 0 0 32px;
+  }
+  .breath {
+    width: 64px; height: 64px;
+    margin: 0 auto 28px;
+    border-radius: 50%;
+    border: 1.5px solid var(--gold-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: pulse 4s ease-in-out infinite;
+  }
+  .breath span {
+    width: 30px; height: 30px;
+    border-radius: 50%;
+    background: var(--indigo);
+    opacity: 0.85;
+    display: block;
+    animation: pulseDot 4s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+  }
+  @keyframes pulseDot {
+    0%, 100% { transform: scale(0.85); opacity: 0.7; }
+    50% { transform: scale(1.1); opacity: 1; }
+  }
+  .download-btn {
+    display: inline-block;
+    background: var(--indigo);
+    color: #FFFFFF;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+    padding: 16px 34px;
+    border: none;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  .download-btn:hover { background: var(--indigo-deep); }
+  .fineprint {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #7A7568;
+  }
+  .divider {
+    width: 48px;
+    height: 1px;
+    background: var(--gold-light);
+    margin: 36px auto 28px;
+  }
+  .upsell {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink);
+  }
+  .upsell a {
+    color: var(--gold);
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid var(--gold-light);
+  }
+  footer {
+    margin-top: 40px;
+    text-align: center;
+    font-size: 11px;
+    letter-spacing: 0.15em;
+    color: var(--gold);
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  footer .tagline {
+    display: block;
+    margin-top: 6px;
+    letter-spacing: 0;
+    text-transform: none;
+    font-style: italic;
+    font-weight: 400;
+    color: var(--ink);
+    font-size: 13px;
+  }
+</style>
+</head>
+<body>
+  <div>
+    <div class="card">
+      <div class="breath"><span></span></div>
+      <div class="kicker">Dear Life Collection</div>
+      <h1>Your 3-Day Reset is ready.</h1>
+      <p class="script">breathe in. let it go.</p>
+      <p class="lead">
+        Six pages to help you name what's weighing you down, ask a better question
+        about it, and put it into words. Print it, or fill it in on screen.
+      </p>
+
+      <a class="download-btn" href="/downloads/3-day-reset.pdf" download>
+        Download Your 3-Day Reset →
+      </a>
+      <div class="fineprint">Opens as a PDF · works on desktop or mobile</div>
+
+      <div class="divider"></div>
+
+      <p class="upsell">
+        When you're ready to go deeper, the full <strong>Let That Sh*t Go Journal</strong>
+        has 26 pages of guided release work — forgiveness letters, an Askfirmations
+        practice, anxiety reframes, and a moving-on bingo card to carry it forward.<br />
+        <a href="https://stan.store/ManifestwithOnja">Get the full journal — $17.77 →</a>
+      </p>
+    </div>
+    <footer>
+      Dear Life Collection
+      <span class="tagline">where energy meets evidence</span>
+    </footer>
+  </div>
+</body>
+</html>
